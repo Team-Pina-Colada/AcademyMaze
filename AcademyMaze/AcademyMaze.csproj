@@ -52,9 +52,11 @@
     <Compile Include="Interfaces\IAskQuestion.cs" />
     <Compile Include="Interfaces\IOptionable.cs" />
     <Compile Include="Interfaces\ITakeAway.cs" />
+    <Compile Include="Interfaces\IUserInterface.cs" />
     <Compile Include="Item.cs" />
     <Compile Include="ItemBeer.cs" />
     <Compile Include="ItemLaptop.cs" />
+    <Compile Include="KeyboardInterface.cs" />
     <Compile Include="MutteringGirlfriend.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerType.cs" />
