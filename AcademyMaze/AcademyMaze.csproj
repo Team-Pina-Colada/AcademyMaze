@@ -57,6 +57,8 @@
     <Compile Include="ItemBeer.cs" />
     <Compile Include="ItemLaptop.cs" />
     <Compile Include="KeyboardInterface.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="MapType.cs" />
     <Compile Include="MutteringGirlfriend.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="PlayerType.cs" />
