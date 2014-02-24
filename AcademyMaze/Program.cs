@@ -1,11 +1,14 @@
 ﻿namespace AcademyMaze
 {
+    using System;
+
     public class Program
     {
         public static void Main(string[] args)
         {
-            Map someMap = new Map(MapType.Hard);
+            GameMenu.StartMenuPrint();
 
+            Map someMap = new Map(MapType.Hard);
             someMap.DrawMap();
         }
     }

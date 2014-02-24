@@ -45,6 +45,7 @@
     <Compile Include="DrinkingParty.cs" />
     <Compile Include="Enemy.cs" />
     <Compile Include="Exam.cs" />
+    <Compile Include="GameMenu.cs" />
     <Compile Include="HandicapEnemy.cs" />
     <Compile Include="HomeworkTask.cs" />
     <Compile Include="Interfaces\IGiveBonus.cs" />
