@@ -8,5 +8,10 @@
             : base(initialCoordinates)
         {
         }
+
+        public void ReduceHeroStats(Player player)
+        {
+            player.Motivation--;
+        }
     }
 }

@@ -41,10 +41,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Ally.cs" />
     <Compile Include="Coordinates.cs" />
     <Compile Include="DrinkingParty.cs" />
     <Compile Include="Enemy.cs" />
+    <Compile Include="Engine.cs" />
     <Compile Include="Exam.cs" />
+    <Compile Include="ExamCSharpOne.cs" />
+    <Compile Include="ExamCSharpTwo.cs" />
+    <Compile Include="ExamOop.cs" />
     <Compile Include="GameMenu.cs" />
     <Compile Include="HandicapEnemy.cs" />
     <Compile Include="HomeworkTask.cs" />

@@ -1,10 +1,7 @@
 ﻿namespace AcademyMaze
 {
     using System;
-    using System.Collections.Generic;
     using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
 
     public class Map
     {
@@ -13,6 +10,8 @@
         public MapType Type { get; set; }
         public int Width { get; set; }
         public int Height { get; set; }
+        public bool[,] WorldMap { get; set; }
+
 
         public Map(MapType mapType)
         {
@@ -20,19 +19,21 @@
 
             if (this.Type == MapType.Easy)
             {
-                this.Width = 5;
-                this.Height = 5;
+                this.Width = 9;
+                this.Height = 9;
             }
             else if (this.Type == MapType.Medium)
             {
-                this.Width = 10;
-                this.Height = 5;
+                this.Width = 12;
+                this.Height = 12;
             }
             else if (this.Type == MapType.Hard)
             {
                 this.Width = 15;
-                this.Height = 10;
+                this.Height = 15;
             }
+
+            this.WorldMap = new bool[this.Width, this.Height];
         }
 
         public void DrawMap()

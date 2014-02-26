@@ -8,5 +8,11 @@
             : base(initialCoordinates, hitPoints)
         {
         }
+
+        public void ReduceHeroStats(Player player)
+        {
+            player.Motivation--;
+            player.Intelligence--;
+        }
     }
 }

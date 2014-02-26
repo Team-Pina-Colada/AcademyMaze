@@ -13,12 +13,12 @@
     {
         static System.Media.SoundPlayer soundEffect = new System.Media.SoundPlayer();
 
-        //Coordinates of our cursor at the start menu
+        // Coordinates of our cursor at the start menu
         static int cursorX = Console.WindowWidth / 2;
         static int cursorY;
         static byte optionCursorPosition = 0;
 
-        //Menu method itself
+        // Menu method itself
         public static void StartMenuPrint()
         {
             optionCursorPosition = 0; // in case of reload
@@ -27,9 +27,10 @@
             Console.CursorVisible = false; //Make cursor invisible
             Console.SetWindowSize(50, 30);
             Console.SetBufferSize(50, 30);
-                
+
             Console.SetCursorPosition(0, 1);
-            //Read our Start Game Logo and print it to the console         
+
+            // Read our Start Game Logo and print it to the console         
             try
             {
                 StreamReader welcomeLogo = new StreamReader("../../LogoGame/AcademyMazeLogo.txt", Encoding.GetEncoding("UTF-8"));
@@ -108,11 +109,11 @@
                 Console.WriteLine("Logo visualization error!.\nAn I/O (Input/Output) error occurred while opening the file.");
             }
 
-            //Set coordinates where our start menu options will be printed
-            cursorX = Console.WindowWidth / 2 - 8;
-            cursorY = Console.WindowHeight / 2 + 5; 
+            // Set coordinates where our start menu options will be printed
+            cursorX = (Console.WindowWidth / 2) - 8;
+            cursorY = (Console.WindowHeight / 2) + 5;
 
-            //Methods call
+            // Methods call
             MenuOptionsPrint();
             RenderCursor(cursorX, cursorY);
             MoveCursor();
@@ -128,7 +129,7 @@
             Console.WriteLine("Game Mode");
             Console.SetCursorPosition(cursorX + 3, cursorY + 2);
             Console.WriteLine("Exit Game");
-        }      
+        }
 
         public static void RenderCursor(int xCoord, int yCoord)
         {
@@ -147,18 +148,18 @@
 
                 if (key.Key == ConsoleKey.DownArrow && optionCursorPosition <= 1)
                 {
-                    Console.Beep(); //Make beep when move cursor
+                    Console.Beep(); // Make beep when move cursor
                     Console.SetCursorPosition(cursorX, cursorY);
-                    Console.Write(' '); //Delete the previous cursor symbol at the respective coords
+                    Console.Write(' '); // Delete the previous cursor symbol at the respective coords
                     cursorY++;
                     optionCursorPosition++;
                     RenderCursor(cursorX, cursorY);
                 }
                 else if (key.Key == ConsoleKey.UpArrow && optionCursorPosition >= 1)
                 {
-                    Console.Beep(); //Make beep when move cursor
+                    Console.Beep(); // Make beep when move cursor
                     Console.SetCursorPosition(cursorX, cursorY);
-                    Console.Write(' ');//Delete the previous cursor symbol at the respective coords
+                    Console.Write(' '); // Delete the previous cursor symbol at the respective coords
                     cursorY--;
                     optionCursorPosition--;
                     RenderCursor(cursorX, cursorY);
@@ -181,11 +182,11 @@
                 Console.Clear();
                 Environment.Exit(0);
             }
-            else if (optionCursorPosition == 1) //Our cursor is at the position of LOAD GAME otpion and the user has pressed ENTER
+            else if (optionCursorPosition == 1) // Our cursor is at the position of LOAD GAME otpion and the user has pressed ENTER
             {
                 Console.Clear();
 
-                //Print Load Menu options
+                // Print Load Menu options
                 Console.ForegroundColor = ConsoleColor.Cyan;
                 Console.SetCursorPosition(Console.WindowWidth / 2 - 18, 3);
                 Console.WriteLine("Choose Game Mode and press \"Enter\"");
@@ -199,12 +200,12 @@
                 Console.WriteLine("Medium - type \"2\"");
 
                 Console.SetCursorPosition(14, 8);
-                Console.WriteLine("Hard   - type \"3\""); 
+                Console.WriteLine("Hard   - type \"3\"");
 
                 Console.SetCursorPosition(7, 10);
                 Console.WriteLine("Return to Main Menu - type \"back\"");
 
-                //Command section printing
+                // Command section printing
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.SetCursorPosition(14, 15);
                 Console.WriteLine(new string('=', 20));
@@ -213,15 +214,13 @@
                 Console.SetCursorPosition(14, 17);
                 Console.WriteLine(new string('=', 20));
 
-                Console.CursorVisible = true; //Make cursor visible
+                Console.CursorVisible = true; // Make cursor visible
 
                 CheckForValidCommand();
             }
-            else if (optionCursorPosition == 0) //Our cursor is at the position of START GAME option and the user has pressed ENTER
+            else if (optionCursorPosition == 0) // Our cursor is at the position of START GAME option and the user has pressed ENTER
             {
-                Console.Clear();
-                Map someMap = new Map(MapType.Easy);
-                someMap.DrawMap();
+                return;
             }
         }
 
@@ -258,7 +257,7 @@
                     Console.Clear();
                     Map someMap = new Map(MapType.Hard);
                     someMap.DrawMap();
-                }                
+                }
                 else if (userCommand == "back")
                 {
                     isValidCommand = true;
@@ -279,7 +278,7 @@
             }
         }
 
-        //It removes the wrong inputted command and places the cursor in the right place for the new command
+        // It removes the wrong inputted command and places the cursor in the right place for the new command
         private static void InvalidCommandRemove(string userCommand)
         {
             for (int i = 0; i < userCommand.Length; i++)
@@ -297,7 +296,7 @@
 
         private static void SimulateLoading()
         {
-            Console.SetCursorPosition(Console.WindowWidth / 2 - 10, Console.WindowHeight - 6);
+            Console.SetCursorPosition((Console.WindowWidth / 2) - 10, Console.WindowHeight - 6);
             Console.Write("Loading");
             for (int i = 0; i < 14; i++)
             {

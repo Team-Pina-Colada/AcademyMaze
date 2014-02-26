@@ -3,7 +3,7 @@
   <Class Name="AcademyMaze.DrinkingParty" Collapsed="true">
     <Position X="6.25" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DrinkingParty.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -55,7 +55,7 @@
   <Class Name="AcademyMaze.ItemBeer" Collapsed="true">
     <Position X="15.25" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ItemBeer.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -63,7 +63,7 @@
   <Class Name="AcademyMaze.ItemLaptop" Collapsed="true">
     <Position X="17.5" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ItemLaptop.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -79,14 +79,14 @@
   <Class Name="AcademyMaze.Map" Collapsed="true">
     <Position X="25.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAABAAAAAAAAAAAAEAAAAAAAAAAAQAAAAABAAA=</HashCode>
+      <HashCode>AAABAAAABAAAAAAAAAAAAEAAIAAAAAAAAQAAAAABAAA=</HashCode>
       <FileName>Map.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AcademyMaze.MutteringGirlfriend" Collapsed="true">
     <Position X="8.5" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MutteringGirlfriend.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -94,7 +94,7 @@
   <Class Name="AcademyMaze.Player" Collapsed="true">
     <Position X="19.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAIAAAAAAAAAAAAAAAAAAAAAIAAACA=</HashCode>
+      <HashCode>AAEAAAAAAIAAAAAAAAAAAAAAAAAAAgAIQAAAAJAAACA=</HashCode>
       <FileName>Player.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -109,8 +109,22 @@
   <Class Name="AcademyMaze.WorldObject" Collapsed="true">
     <Position X="13" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAA=</HashCode>
       <FileName>WorldObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AcademyMaze.Ally" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ally.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="AcademyMaze.Engine" Collapsed="true">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAEAAAACAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Engine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Struct Name="AcademyMaze.Coordinates" Collapsed="true">
@@ -137,7 +151,7 @@
   <Interface Name="AcademyMaze.Interfaces.IMovable" Collapsed="true">
     <Position X="25.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IMovable.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -151,7 +165,7 @@
   <Interface Name="AcademyMaze.Interfaces.ITakeAway" Collapsed="true">
     <Position X="24" Y="7.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\ITakeAway.cs</FileName>
     </TypeIdentifier>
   </Interface>

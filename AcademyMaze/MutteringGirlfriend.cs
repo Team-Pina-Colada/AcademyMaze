@@ -8,5 +8,10 @@
             : base(initialCoordinates, hitPoints)
         {
         }
+
+        public void ReduceHeroStats(Player player)
+        {
+            player.Motivation -= 2;
+        }
     }
 }

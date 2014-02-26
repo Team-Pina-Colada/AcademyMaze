@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AcademyMaze
+﻿namespace AcademyMaze
 {
+    using System;
+    using System.Linq;
+
     using AcademyMaze.Interfaces;
     public class KeyboardInterface : IUserInterface
     {
@@ -35,7 +32,7 @@ namespace AcademyMaze
                 {
                     if (this.OnLeftPressed != null)
                     {
-                        this.OnLeftPressed(this,new EventArgs());
+                        this.OnLeftPressed(this, new EventArgs());
                     }
                 }
 
@@ -46,7 +43,7 @@ namespace AcademyMaze
                         this.OnRightPressed(this, new EventArgs());
                     }
                 }
-                
+
             }
         }
 

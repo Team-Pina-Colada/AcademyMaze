@@ -7,31 +7,54 @@
         public Player(Coordinates initialCoordinates, PlayerType playerType)
             : base(initialCoordinates)
         {
+            this.CurrentPosition = initialCoordinates;
+
             this.HeroType = playerType;
 
-            // TODO: Implement values for hero stats.
             if (this.HeroType == PlayerType.Stubborn)
             {
-                this.Intelligence = 0;
-                this.Stubborness = 0;
+                this.Intelligence = 2;
+                this.Motivation = 5;
             }
 
             if (this.HeroType == PlayerType.Nerd)
             {
-                this.Intelligence = 0;
-                this.Stubborness = 0;
+                this.Intelligence = 4;
+                this.Motivation = 3;
             }
         }
 
         public int Intelligence { get; set; }
 
-        public int Stubborness { get; set; }
+        public int Motivation { get; set; }
 
         public PlayerType HeroType { get; set; }
 
-        public void Move(Coordinates newPosition)
+        public Coordinates CurrentPosition { get; set; }
+
+        public void MoveLeft()
         {
-            throw new System.NotImplementedException();
+            this.Move(0, -1);
+        }
+
+        public void MoveRight()
+        {
+            this.Move(0, 1);
+        }
+
+        public void MoveUp()
+        {
+            this.Move(-1, 0);
+        }
+
+        public void MoveDown()
+        {
+            this.Move(1, 0);
+        }
+
+        private void Move(int x, int y)
+        {
+            this.CurrentPosition = new Coordinates(this.CurrentPosition.CoordinateX + x, this.CurrentPosition.CoordinateY + y);
         }
     }
 }

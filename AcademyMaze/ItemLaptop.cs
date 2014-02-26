@@ -8,5 +8,10 @@
             : base(initialCoordinates)
         {
         }
+
+        public void IncreaseHeroStats(Player player)
+        {
+            player.Intelligence++;
+        }
     }
 }
