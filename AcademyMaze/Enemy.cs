@@ -2,12 +2,12 @@
 {
     public abstract class Enemy : WorldObject
     {
-        public Enemy(Coordinates initialCoordinates, int hitPoints)
+        public Enemy(Coordinates initialCoordinates)
             : base(initialCoordinates)
         {
-            this.HitPoints = hitPoints;
         }
 
-        public int HitPoints { get; set; }
+        public int HitPoints { get; protected set; }
+
     }
 }

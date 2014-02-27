@@ -8,15 +8,14 @@
     {
         public void ProcessInput()
         {
-            if (Console.KeyAvailable)
-            {
-                ConsoleKeyInfo keyInfo = Console.ReadKey();
+            ConsoleKeyInfo keyInfo = Console.ReadKey(true);
+
 
                 if (keyInfo.Key.Equals(ConsoleKey.W) || keyInfo.Key.Equals(ConsoleKey.UpArrow))
                 {
                     if (this.OnUpPressed != null)
                     {
-                        this.OnUpPressed(this, new EventArgs());
+                        this.OnUpPressed(this, new DirectionSetEvent(Direction.Up));
                     }
                 }
 
@@ -24,7 +23,7 @@
                 {
                     if (this.OnDownPressed != null)
                     {
-                        this.OnDownPressed(this, new EventArgs());
+                        this.OnDownPressed(this, new DirectionSetEvent(Direction.Down));
                     }
                 }
 
@@ -32,7 +31,7 @@
                 {
                     if (this.OnLeftPressed != null)
                     {
-                        this.OnLeftPressed(this, new EventArgs());
+                        this.OnLeftPressed(this, new DirectionSetEvent(Direction.Left));
                     }
                 }
 
@@ -40,19 +39,19 @@
                 {
                     if (this.OnRightPressed != null)
                     {
-                        this.OnRightPressed(this, new EventArgs());
+                        this.OnRightPressed(this, new DirectionSetEvent(Direction.Right));
                     }
                 }
 
-            }
+            
         }
 
-        public event EventHandler OnUpPressed;
+        public event EventHandler<DirectionSetEvent> OnUpPressed;
 
-        public event EventHandler OnDownPressed;
+        public event EventHandler<DirectionSetEvent> OnDownPressed;
 
-        public event EventHandler OnLeftPressed;
+        public event EventHandler<DirectionSetEvent> OnLeftPressed;
 
-        public event EventHandler OnRightPressed;
+        public event EventHandler<DirectionSetEvent> OnRightPressed;
     }
 }

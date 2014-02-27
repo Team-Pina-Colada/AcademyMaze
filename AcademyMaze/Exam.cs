@@ -1,19 +1,26 @@
 ﻿namespace AcademyMaze
 {
     using System;
+    using System.Collections.Generic;
 
     using AcademyMaze.Interfaces;
 
     public abstract class Exam : Enemy, IAskQuestion, IGiveBonus, IOptionable
     {
-        public Exam(Coordinates initialCoordinates, int hitPoints)
-            : base(initialCoordinates, hitPoints)
+        protected int currentlyAskedQuestion;
+
+        public Exam(Coordinates initialCoordinates, ICollection<Question> questions)
+            : base(initialCoordinates)
         {
+            this.currentlyAskedQuestion = 0;
         }
 
-        public virtual void AskQuestion()
+        public abstract Question AskQuestion();
+
+        public void IncreaseHeroStats(Player player)
         {
-            Console.Write("The Exam asks you: ");
+            throw new NotImplementedException();
         }
+
     }
 }

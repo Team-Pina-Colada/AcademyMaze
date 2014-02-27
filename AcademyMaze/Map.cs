@@ -39,7 +39,7 @@
         public void DrawMap()
         {
             Console.ForegroundColor = ConsoleColor.Gray;
-
+            Console.SetCursorPosition(0, 0);
             for (int row = 0; row < this.Height; row++)
             {
                 for (int col = 0; col < this.Width; col++)

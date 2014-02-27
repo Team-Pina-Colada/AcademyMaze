@@ -6,12 +6,23 @@
     {
         private const int HomeworkHitpoints = 1;
 
-        public HomeworkTask(Coordinates initialCoordinates, int hitPoints)
-            : base(initialCoordinates, hitPoints = HomeworkHitpoints)
+        public HomeworkTask(Coordinates initialCoordinates)
+            : base(initialCoordinates)
         {
+            this.HitPoints = HomeworkHitpoints;
         }
 
-        public void AskQuestion()
+        public Question AskQuestion()
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public void IncreaseHeroStats(Player player)
+        {
+            throw new System.NotImplementedException();
+        }
+
+        public override string InteractNotification()
         {
             throw new System.NotImplementedException();
         }

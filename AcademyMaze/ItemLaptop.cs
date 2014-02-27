@@ -13,5 +13,10 @@
         {
             player.Intelligence++;
         }
+
+        public override string InteractNotification()
+        {
+            return "You found a new Laptop.\nCongratulations, your Inteligence increased";
+        }
     }
 }

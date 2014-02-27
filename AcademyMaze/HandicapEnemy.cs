@@ -2,8 +2,8 @@
 {
     public abstract class HandicapEnemy : Enemy
     {
-        public HandicapEnemy(Coordinates initialCoordinates, int hitPoints)
-            : base(initialCoordinates, hitPoints)
+        public HandicapEnemy(Coordinates initialCoordinates)
+            : base(initialCoordinates)
         {
         }
     }

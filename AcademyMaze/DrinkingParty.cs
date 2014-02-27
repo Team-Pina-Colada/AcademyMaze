@@ -4,8 +4,8 @@
 
     public class DrinkingParty : HandicapEnemy, ITakeAway
     {
-        public DrinkingParty(Coordinates initialCoordinates, int hitPoints)
-            : base(initialCoordinates, hitPoints)
+        public DrinkingParty(Coordinates initialCoordinates)
+            : base(initialCoordinates)
         {
         }
 
@@ -13,6 +13,11 @@
         {
             player.Motivation--;
             player.Intelligence--;
+        }
+
+        public override string InteractNotification()
+        {
+            return "Alcochol is bad! Very bad! You are a drunk pig! Your stats decreased.";
         }
     }
 }

@@ -8,5 +8,7 @@
         }
 
         public Coordinates StartingPosition { get; set; }
+
+        public abstract string InteractNotification();
     }
 }

@@ -1,6 +1,7 @@
 ﻿namespace AcademyMaze
 {
     using AcademyMaze.Interfaces;
+    using System;
 
     public class Player : WorldObject, IMovable
     {
@@ -32,6 +33,12 @@
 
         public Coordinates CurrentPosition { get; set; }
 
+        public void DrawPlayer()
+        {
+            Console.SetCursorPosition(CurrentPosition.CoordinateY, CurrentPosition.CoordinateX);
+            Console.Write("X");
+        }
+
         public void MoveLeft()
         {
             this.Move(0, -1);
@@ -55,6 +62,11 @@
         private void Move(int x, int y)
         {
             this.CurrentPosition = new Coordinates(this.CurrentPosition.CoordinateX + x, this.CurrentPosition.CoordinateY + y);
+        }
+
+        public override string InteractNotification()
+        {
+            return "I am player, I do not return a sh...";
         }
     }
 }
