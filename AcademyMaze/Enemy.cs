@@ -6,8 +6,5 @@
             : base(initialCoordinates)
         {
         }
-
-        public int HitPoints { get; protected set; }
-
     }
 }

@@ -26,21 +26,21 @@
   <Class Name="AcademyMaze.Enemy" Collapsed="true">
     <Position X="8.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Enemy.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AcademyMaze.Engine" Collapsed="true">
     <Position X="14" Y="6" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAAgCAAIgAEAAA0CEAEAICAAAAAAAAABAAACAQ=</HashCode>
+      <HashCode>AAAEgAAAgCEAIgAEAAA0CEAAAIOAAAAAAAAABAAACAQ=</HashCode>
       <FileName>Engine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AcademyMaze.Exam" Collapsed="true">
     <Position X="9.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAIAAA=</HashCode>
+      <HashCode>AAAAACAAAAAAAAAABAAAFAAAAAACAAAEQAgAAQAAAAA=</HashCode>
       <FileName>Exam.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -48,28 +48,28 @@
   <Class Name="AcademyMaze.ExamCSharpOne" Collapsed="true">
     <Position X="7.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAAAAAgQAYAAAAAAABAQAAAAAAAAAA=</HashCode>
       <FileName>ExamCSharpOne.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AcademyMaze.ExamCSharpTwo" Collapsed="true">
     <Position X="9.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AgQAAAAAAAAAAAAAAAAAAAYAAAAAAABAQAAAAAAAAAA=</HashCode>
       <FileName>ExamCSharpTwo.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AcademyMaze.ExamOop" Collapsed="true">
     <Position X="11.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAAAAAAAAAYAAAAAAABAUAAAAAAAAIA=</HashCode>
       <FileName>ExamOop.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AcademyMaze.GameMenu" Collapsed="true">
     <Position X="11.75" Y="7" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQCAAAAAAAQAQQAAAAAAAAiAAEAAAAAAAAAAAwBgACA=</HashCode>
+      <HashCode>AQAAAAAAAAQAQQAEAAAAAACAAEAAAAAAQAAAAwBgACA=</HashCode>
       <FileName>GameMenu.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -83,7 +83,7 @@
   <Class Name="AcademyMaze.HomeworkTask" Collapsed="true">
     <Position X="14" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAACAAAAAAAAAAAQAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAACAAAACAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAA=</HashCode>
       <FileName>HomeworkTask.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -122,7 +122,7 @@
   <Class Name="AcademyMaze.Map" Collapsed="true">
     <Position X="14" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAABAAAABAAAAAAAAAAAAEAAIAAAAAAAAQAAAAABAAA=</HashCode>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAEAAIAAAAAAAAQAAAAABAQA=</HashCode>
       <FileName>Map.cs</FileName>
     </TypeIdentifier>
   </Class>

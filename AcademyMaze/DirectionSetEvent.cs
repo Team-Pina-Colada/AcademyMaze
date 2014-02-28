@@ -8,7 +8,7 @@
         {
             this.SetDirection = setDirection;
         }
-        public Direction SetDirection { get; set; }
 
+        public Direction SetDirection { get; set; }
     }
 }

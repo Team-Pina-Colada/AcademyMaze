@@ -13,7 +13,7 @@
         private const int DonchoInteligenceBonus = 2;
         private const int DonchoMotivationBonus = 3;
 
-        private AllyType allyType;
+        private readonly AllyType allyType;
 
         public Ally(Coordinates initialCoordinates, AllyType trainer)
             : base(initialCoordinates)
@@ -23,7 +23,7 @@
 
         public virtual void IncreaseHeroStats(Player player)
         {
-            switch (allyType)
+            switch (this.allyType)
             {
                 case AllyType.Ivo:
                     player.Intelligence += IvoInteligenceBonus;

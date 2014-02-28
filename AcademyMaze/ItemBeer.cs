@@ -16,7 +16,7 @@
 
         public override string InteractNotification()
         {
-            return "You drunk 3,4,5 beers. Now you don't want to study enymore. Your motivations decreased.";
+            return "You drunk 3,4,5 beers. Now you don't want to study enymore.\nYour motivations decreased.";
         }
     }
 }

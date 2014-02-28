@@ -41,9 +41,11 @@
             StringBuilder formatedQuestion = new StringBuilder();
             formatedQuestion.AppendLine(this.AskedQuestion);
 
+            int count = 1;
             foreach (var answer in this.Answers)
             {
-                formatedQuestion.AppendLine(answer);
+                formatedQuestion.AppendLine(count + ". " + answer);
+                count++;
             }
 
             return formatedQuestion.ToString();

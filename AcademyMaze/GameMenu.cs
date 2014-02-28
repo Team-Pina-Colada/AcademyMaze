@@ -1,22 +1,37 @@
 ﻿namespace AcademyMaze
 {
     using System;
-    using System.Collections.Generic;
     using System.IO;
     using System.Linq;
     using System.Security;
     using System.Text;
     using System.Threading;
-    using System.Threading.Tasks;
 
     public class GameMenu
     {
-        static System.Media.SoundPlayer soundEffect = new System.Media.SoundPlayer();
-
         // Coordinates of our cursor at the start menu
-        static int cursorX = Console.WindowWidth / 2;
-        static int cursorY;
-        static byte optionCursorPosition = 0;
+        private static int cursorX = Console.WindowWidth / 2;
+        private static int cursorY;
+        private static byte optionCursorPosition = 0;
+        private static PlayerType selectedPlayerType;
+
+        static GameMenu()
+        {
+            GameMenu.selectedPlayerType = PlayerType.Stubborn;
+        }
+
+        public static PlayerType SelectedPlayerType
+        {
+            get
+            {
+                return selectedPlayerType;
+            }
+
+            private set
+            {
+                selectedPlayerType = value;
+            }
+        }
 
         // Menu method itself
         public static void StartMenuPrint()
@@ -24,7 +39,7 @@
             optionCursorPosition = 0; // in case of reload
 
             Console.Title = "Academy Maze";
-            Console.CursorVisible = false; //Make cursor invisible
+            Console.CursorVisible = false; // Make cursor invisible
             Console.SetWindowSize(50, 30);
             Console.SetBufferSize(50, 30);
 
@@ -126,14 +141,16 @@
             Console.SetCursorPosition(cursorX + 3, cursorY);
             Console.WriteLine("Start Game");
             Console.SetCursorPosition(cursorX + 3, cursorY + 1);
-            Console.WriteLine("Game Mode");
+            Console.WriteLine("Select Hero");
             Console.SetCursorPosition(cursorX + 3, cursorY + 2);
+            Console.WriteLine("Game Mode");
+            Console.SetCursorPosition(cursorX + 3, cursorY + 3);
             Console.WriteLine("Exit Game");
         }
 
-        public static void RenderCursor(int xCoord, int yCoord)
+        public static void RenderCursor(int coordX, int coordY)
         {
-            Console.SetCursorPosition(xCoord, yCoord);
+            Console.SetCursorPosition(coordX, coordY);
             Console.ForegroundColor = ConsoleColor.Magenta;
             Console.Write('#');
         }
@@ -146,7 +163,7 @@
             {
                 key = Console.ReadKey();
 
-                if (key.Key == ConsoleKey.DownArrow && optionCursorPosition <= 1)
+                if (key.Key == ConsoleKey.DownArrow && optionCursorPosition <= 2)
                 {
                     Console.Beep(); // Make beep when move cursor
                     Console.SetCursorPosition(cursorX, cursorY);
@@ -177,18 +194,18 @@
 
         public static void OptionSelected()
         {
-            if (optionCursorPosition == 2)
+            if (optionCursorPosition == 3)
             {
                 Console.Clear();
                 Environment.Exit(0);
             }
-            else if (optionCursorPosition == 1) // Our cursor is at the position of LOAD GAME otpion and the user has pressed ENTER
+            else if (optionCursorPosition == 2) 
             {
                 Console.Clear();
 
                 // Print Load Menu options
                 Console.ForegroundColor = ConsoleColor.Cyan;
-                Console.SetCursorPosition(Console.WindowWidth / 2 - 18, 3);
+                Console.SetCursorPosition((Console.WindowWidth / 2) - 18, 3);
                 Console.WriteLine("Choose Game Mode and press \"Enter\"");
 
                 Console.ForegroundColor = ConsoleColor.Magenta;
@@ -218,7 +235,59 @@
 
                 CheckForValidCommand();
             }
-            else if (optionCursorPosition == 0) // Our cursor is at the position of START GAME option and the user has pressed ENTER
+            else if (optionCursorPosition == 1)
+            {
+                Console.Clear();
+
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.SetCursorPosition((Console.WindowWidth / 2) - 18, 5);
+                Console.WriteLine("Select a hero and press Enter");
+
+                Console.SetCursorPosition(14, 8);
+                Console.WriteLine("STUBBORN   - type \"1\"");
+
+                Console.SetCursorPosition(14, 9);
+                Console.WriteLine("NERD       - type \"2\"");
+
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.SetCursorPosition(14, 15);
+                Console.WriteLine(new string('=', 20));
+                Console.SetCursorPosition(18, 16);
+                Console.Write("Command: ");
+                Console.SetCursorPosition(14, 17);
+                Console.WriteLine(new string('=', 20));
+
+                Console.CursorVisible = true; // Make cursor visible
+
+                bool correctInput = false;
+
+                while (!correctInput)
+                {
+                    Console.SetCursorPosition(27, 16);
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    int userInput = int.Parse(Console.ReadLine());
+
+                    if (userInput == 1)
+                    {
+                        SelectedPlayerType = PlayerType.Stubborn;
+                    }
+                    else if (userInput == 2)
+                    {
+                        SelectedPlayerType = PlayerType.Nerd;
+                    }
+                    else
+                    {
+                        Console.SetCursorPosition(6, 20);
+                        Console.ForegroundColor = ConsoleColor.Red;
+                        Console.WriteLine("Command is NOT VALID! Please try again!");
+                    }
+
+                    correctInput = true;
+                    Console.Clear();
+                    StartMenuPrint();
+                }
+            }
+            else if (optionCursorPosition == 0) 
             {
                 return;
             }
@@ -267,8 +336,6 @@
                 }
                 else
                 {
-                    PlaySound("../../sounds/error-command.wav");
-
                     Console.SetCursorPosition(6, 20);
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("Command is NOT VALID! Please try again!");
@@ -286,12 +353,6 @@
                 Console.SetCursorPosition(27 + i, 16);
                 Console.WriteLine(" ");
             }
-        }
-
-        public static void PlaySound(string filePath)
-        {
-            soundEffect.SoundLocation = filePath;
-            soundEffect.Play();
         }
 
         private static void SimulateLoading()

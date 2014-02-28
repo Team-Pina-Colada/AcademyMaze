@@ -17,7 +17,7 @@
 
         public override string InteractNotification()
         {
-            return "Alcochol is bad! Very bad! You are a drunk pig! Your stats decreased.";
+            return "Alcochol is bad! Very bad! You are a drunk pig!\nYour stats decreased.";
         }
     }
 }

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<JustCodeSettings Version="0.0" Timestamp="037a0a4e-8a42-4304-a7f2-cb62235ba3d4">
+  <IgnoredErrorsAndWarningsSettings xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+    <IgnoredErrorsAndWarnings Version="2">
+      <FilePath>
+        <FileRelativePath>AcademyMaze/Properties/AssemblyInfo.cs</FileRelativePath>
+        <ProjectRelativePath>AcademyMaze/AcademyMaze.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>10113840695211819355</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+      <FilePath>
+        <FileRelativePath>AcademyMaze/ExamCSharpOne.cs</FileRelativePath>
+        <ProjectRelativePath>AcademyMaze/AcademyMaze.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>8282859483747941733</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+      <FilePath>
+        <FileRelativePath>AcademyMaze/ExamCSharpTwo.cs</FileRelativePath>
+        <ProjectRelativePath>AcademyMaze/AcademyMaze.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>8282859483747941733</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+      <FilePath>
+        <FileRelativePath>AcademyMaze/ExamOop.cs</FileRelativePath>
+        <ProjectRelativePath>AcademyMaze/AcademyMaze.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>8282859483747941733</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+      <FilePath>
+        <FileRelativePath>AcademyMaze/Map.cs</FileRelativePath>
+        <ProjectRelativePath>AcademyMaze/AcademyMaze.csproj</ProjectRelativePath>
+        <IgnoredElement>
+          <TextualIdentifier>7510550577067898797</TextualIdentifier>
+        </IgnoredElement>
+      </FilePath>
+    </IgnoredErrorsAndWarnings>
+  </IgnoredErrorsAndWarningsSettings>
+</JustCodeSettings>

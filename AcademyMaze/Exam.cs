@@ -2,25 +2,43 @@
 {
     using System;
     using System.Collections.Generic;
-
     using AcademyMaze.Interfaces;
 
     public abstract class Exam : Enemy, IAskQuestion, IGiveBonus, IOptionable
     {
-        protected int currentlyAskedQuestion;
+        private readonly int inteligenceBonus;
+        private readonly int motivationBonus;
 
-        public Exam(Coordinates initialCoordinates, ICollection<Question> questions)
+        public Exam(Coordinates initialCoordinates, IList<Question> questions, int hitPoints, int attackPoints, int inteligenceBonus, int motivationBonus)
             : base(initialCoordinates)
         {
-            this.currentlyAskedQuestion = 0;
+            this.CurrentlyAskedQuestion = 0;
+            this.Questions = questions;
+            this.HitPoints = hitPoints;
+            this.AttackPoints = attackPoints;
+            this.inteligenceBonus = inteligenceBonus;
+            this.motivationBonus = motivationBonus;
         }
+
+        public int CurrentlyAskedQuestion { get; protected set; }
+
+        public int HitPoints { get; set; }
+
+        public int AttackPoints { get; protected set; }
+
+        public int TotalQUestions
+        {
+            get { return this.Questions.Count; }
+        }
+
+        protected IList<Question> Questions { get; set; }
 
         public abstract Question AskQuestion();
 
         public void IncreaseHeroStats(Player player)
         {
-            throw new NotImplementedException();
+            player.Intelligence += this.inteligenceBonus;
+            player.Motivation += this.motivationBonus;
         }
-
     }
 }

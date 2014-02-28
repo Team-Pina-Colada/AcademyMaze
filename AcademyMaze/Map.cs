@@ -5,13 +5,7 @@
 
     public class Map
     {
-        static char tile = '\u25a0';
-
-        public MapType Type { get; set; }
-        public int Width { get; set; }
-        public int Height { get; set; }
-        public bool[,] WorldMap { get; set; }
-
+        private static readonly char Tile = '\u25a0';
 
         public Map(MapType mapType)
         {
@@ -36,15 +30,30 @@
             this.WorldMap = new bool[this.Width, this.Height];
         }
 
+        public MapType Type { get; set; }
+
+        public int Width { get; set; }
+
+        public int Height { get; set; }
+
+        public bool[,] WorldMap { get; set; }
+
         public void DrawMap()
         {
             Console.ForegroundColor = ConsoleColor.Gray;
             Console.SetCursorPosition(0, 0);
+
             for (int row = 0; row < this.Height; row++)
             {
                 for (int col = 0; col < this.Width; col++)
                 {
-                    Console.Write(tile);
+                    if (this.WorldMap[row, col] == true)
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+
+                    Console.Write(Tile);
+                    Console.ForegroundColor = ConsoleColor.Gray;
                 }
 
                 Console.WriteLine();
