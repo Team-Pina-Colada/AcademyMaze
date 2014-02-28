@@ -180,7 +180,7 @@
                 else if (item is HomeworkTask)
                 {
                     var currentTask = item as HomeworkTask;
-                    Console.WriteLine("This is the last task of your homework.\nYou don't have much time, answer ASAP");
+                    Console.WriteLine("This is the last task of your homework.\nAs usual, it is 23:58, hurry up");
 
                     try
                     {
@@ -220,7 +220,7 @@
             while (!correctInput)
             {
                 this.DrawAll();
-                Console.Write("You have encountered {0}.\nAre you ready to face it? (y/n)", item.GetType().Name);
+                Console.Write("You have encountered {0}.\nAre you ready to face it? (y/n)", item.Name);
                 string userInput = Console.ReadLine();
 
                 if (userInput == "n")
@@ -296,8 +296,10 @@
         private void DrawStats()
         {
             Console.SetCursorPosition(this.someMap.Width + 5, 3);
-            Console.WriteLine("Inteligence: {0}", this.HumanPlayer.Intelligence);
+            Console.WriteLine("Chosen Hero: {0}", this.HumanPlayer.HeroType);
             Console.SetCursorPosition(this.someMap.Width + 5, 4);
+            Console.WriteLine("Inteligence: {0}", this.HumanPlayer.Intelligence);
+            Console.SetCursorPosition(this.someMap.Width + 5, 5);
             Console.WriteLine("Motivation:  {0}", this.HumanPlayer.Motivation);
             Console.SetCursorPosition(0, this.someMap.Height + 3);
         }

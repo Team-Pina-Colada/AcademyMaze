@@ -36,6 +36,7 @@
         public ExamCSharpTwo(Coordinates position)
             : base(position, ExamQuestions, CSharpTwoHP, CSharpTwoAP, InteligenceBonus, MotivationBonus)
         {
+            this.Name = "C#2 exam.";
         }
 
         public override Question AskQuestion()

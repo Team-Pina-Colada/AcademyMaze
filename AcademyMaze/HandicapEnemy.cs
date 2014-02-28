@@ -1,10 +1,23 @@
 ﻿namespace AcademyMaze
 {
-    public abstract class HandicapEnemy : Enemy
+    using AcademyMaze.Interfaces;
+
+    public abstract class HandicapEnemy : Enemy, ITakeAway
     {
-        public HandicapEnemy(Coordinates initialCoordinates)
+        private readonly int inteligenceHandicap;
+        private readonly int motivationHandicap;
+
+        public HandicapEnemy(Coordinates initialCoordinates, int inteligenceHandicap, int motivationHandicap)
             : base(initialCoordinates)
         {
+            this.inteligenceHandicap = inteligenceHandicap;
+            this.motivationHandicap = motivationHandicap;
+        }
+
+        public void ReduceHeroStats(Player player)
+        {
+            player.Intelligence -= this.inteligenceHandicap;
+            player.Motivation -= this.motivationHandicap;
         }
     }
 }

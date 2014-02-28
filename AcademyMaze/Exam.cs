@@ -31,6 +31,8 @@
             get { return this.Questions.Count; }
         }
 
+        public string Name { get; protected set; }
+
         protected IList<Question> Questions { get; set; }
 
         public abstract Question AskQuestion();

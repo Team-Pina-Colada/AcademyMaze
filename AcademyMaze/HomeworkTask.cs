@@ -27,7 +27,7 @@
             new Question(
                 "Are the methods implemented in the interfaces",
                 new List<string> { "Yes", "No", "It depends" },
-                0),
+                1),
             new Question(
                 "Is it obligatory to override virtual methods in child classes",
                 new List<string> { "Yes", "No", "It depends" },

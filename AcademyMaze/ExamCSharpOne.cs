@@ -37,6 +37,7 @@
         public ExamCSharpOne(Coordinates position)
             : base(position, ExamQuestions, CSharpOneHP, CSharpOneAP, InteligenceBonus, MotivationBonus)
         {
+            this.Name = "C#1 exam.";
         }
 
         public override Question AskQuestion()

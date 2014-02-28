@@ -18,10 +18,9 @@
   <Class Name="AcademyMaze.DrinkingParty" Collapsed="true">
     <Position X="5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAQAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>DrinkingParty.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="AcademyMaze.Enemy" Collapsed="true">
     <Position X="8.25" Y="1.75" Width="1.5" />
@@ -40,7 +39,7 @@
   <Class Name="AcademyMaze.Exam" Collapsed="true">
     <Position X="9.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAACAAAAAAAAAABAAAFAAAAAACAAAEQAgAAQAAAAA=</HashCode>
+      <HashCode>AAAAACAAAAAAAAAABAAAFAQAAAACAAAEQAgAAQAAAAA=</HashCode>
       <FileName>Exam.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -76,9 +75,10 @@
   <Class Name="AcademyMaze.HandicapEnemy" Collapsed="true">
     <Position X="3.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAABAAAAAAAAACAAAAAAAAAAAACAAAAAAAAAAA=</HashCode>
       <FileName>HandicapEnemy.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="AcademyMaze.HomeworkTask" Collapsed="true">
     <Position X="14" Y="3.25" Width="1.5" />
@@ -129,10 +129,9 @@
   <Class Name="AcademyMaze.MutteringGirlfriend" Collapsed="true">
     <Position X="2.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AgAAAAAAAAAAAAQAAAAAAAAAAAIAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>MutteringGirlfriend.cs</FileName>
     </TypeIdentifier>
-    <Lollipop Position="0.2" />
   </Class>
   <Class Name="AcademyMaze.Player" Collapsed="true">
     <Position X="20.75" Y="1.75" Width="1.5" />
@@ -194,7 +193,7 @@
   <Interface Name="AcademyMaze.Interfaces.IOptionable" Collapsed="true">
     <Position X="0.5" Y="6.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IOptionable.cs</FileName>
     </TypeIdentifier>
   </Interface>

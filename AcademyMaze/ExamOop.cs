@@ -37,6 +37,7 @@
         public ExamOop(Coordinates position)
             : base(position, ExamQuestions, OopExamHP, OopExamAP, InteligenceBonus, MotivationBonus)
         {
+            this.Name = "OOP exam.";
         }
 
         public override Question AskQuestion()
